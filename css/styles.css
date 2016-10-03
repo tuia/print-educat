@@ -1,0 +1,218 @@
+/* COLOR PALETTE
+
+	lighter-gray: #ececec;
+	dark-gray: #878784;
+
+ */
+
+body {
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+/* typography */
+h1 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 24pt;
+	line-height: 1.1;
+}
+h2 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 16pt;
+	color: #878784;
+	line-height: 1.1;
+}
+h3 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 14pt;
+	line-height: 1.1;
+}
+h4 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 11pt;
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	line-height: 1.1;
+}
+p {
+	line-height: 1.5em;
+}
+h1,h2,h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h4, h5, h6{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* description lists */
+.dl-horizontal dt {
+    clear: left;
+    float: left;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+}
+.dl-horizontal dd {
+    margin-left: 180px;
+}
+
+/* tables */
+table {
+  background-color: transparent;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+/* FORM TABLE */
+.form-table {
+	font-family: "Roboto Condensed", sans-serif;
+}
+.form-table > thead > tr > th{
+	text-align: left;
+	padding: 0;
+}
+.form-table > tbody > tr > td{
+	background: #ececec;
+	border: 3px solid #FFFFFF;
+	height: 30pt;
+}
+.name-table {
+	width: 100%;
+	text-align: center;
+}
+.name-table > thead > tr > th{
+	text-align: center;
+	font-size: 20pt;
+	font-weight: bold;
+}
+.name-table > tfoot > tr > td{
+	font-style: italic;
+	font-size: 12pt;
+	font-weight: lighter;
+	color: #878784; 
+}
+
+
+/* lists */
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+
+
+
+/* PAGE DESIGN */
+.page {
+	page-break-after: always;
+	height: 842pt;
+	position: relative;
+}
+/* page header */
+.page header {}
+.page header .logo {
+	float: left;
+}
+.page header .qrcode{
+	float: right;
+}
+.page header .logo img, .page header .qrcode img {
+	height: 45pt;
+}
+.page header .header-data {
+	background: #ececec;
+	clear: both;
+	height: auto;
+	overflow: auto;
+}
+.page header .header-data .dl-horizontal{
+	width: 50%;
+	float: left;
+}
+
+
+/* ITEM */
+/* item counter */
+.page .item {
+ 	page-break-inside: avoid;
+}
+body {
+	counter-reset: question-counter;
+}
+.page .item .ennunciation:before {
+	content: counter(question-counter);
+	counter-increment: question-counter;
+	font-weight: bold;
+}
+
+.page .item .ennunciation-container .qrcode img{
+	height: 45pt;
+}
+
+
+/* page footer */
+.page footer {
+	background: #878784;
+	color: #FFFFFF;
+	font-size: 12pt;
+	padding: 3pt 10pt;
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+ 
+
+
+
+
+/* COVER PAGE */
+#cover header .logo img {
+	height: 90pt;
+}
+#cover .form-container {
+	clear: both;
+}
+#cover .instructions-container {
+	border-top: 1px solid #878784;
+	margin-top: 10pt;
+	padding: 10pt;
+}
