@@ -15,35 +15,38 @@ h1 {
 	font-family: "Roboto Condensed", sans-serif;
 	font-size: 24pt;
 	line-height: 1.1;
+	margin: 20px auto .3em;
 }
 h2 {
 	font-family: "Roboto Condensed", sans-serif;
 	font-size: 16pt;
 	color: #878784;
 	line-height: 1.1;
+	margin: .5em auto;
 }
 h3 {
 	font-family: "Roboto Condensed", sans-serif;
 	font-size: 14pt;
 	line-height: 1.1;
+	font-weight: lighter;
 }
 h4 {
 	font-family: "Roboto Condensed", sans-serif;
 	font-size: 11pt;
 	text-transform: uppercase;
-	letter-spacing: .5em;
+	letter-spacing: .2em;
 	line-height: 1.1;
+	font-weight: bold;
 }
 p {
 	line-height: 1.5em;
 }
-h1,h2,h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
 h4, h5, h6{
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.ennunciation, .alternatives {
+	font-size: 12pt;
 }
 
 
@@ -55,10 +58,11 @@ h4, h5, h6{
     text-align: right;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 160px;
+    width: 80pt;
+    color: #878784;
 }
 .dl-horizontal dd {
-    margin-left: 180px;
+    margin-left: 90pt;
 }
 
 /* tables */
@@ -93,6 +97,25 @@ table {
 .table > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 5px;
+}
+.table-bordered {
+  border: 1px solid #dddddd;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #dddddd;
+}
 
 /* FORM TABLE */
 .form-table {
@@ -106,6 +129,7 @@ table {
 	background: #ececec;
 	border: 3px solid #FFFFFF;
 	height: 30pt;
+	font-size: 13pt;
 }
 .name-table {
 	width: 100%;
@@ -136,7 +160,15 @@ ul ol,
 ol ol {
   margin-bottom: 0;
 }
-
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
 
 
 /* PAGE DESIGN */
@@ -144,14 +176,23 @@ ol ol {
 	page-break-after: always;
 	height: 842pt;
 	position: relative;
+	padding-bottom: 50pt;
 }
 /* page header */
-.page header {}
+.page header {
+	height: auto;
+	overflow: auto;
+}
 .page header .logo {
 	float: left;
 }
 .page header .qrcode{
 	float: right;
+	width: 10%;
+	text-align: right;
+}
+.page header .logo, .page header .qrcode {
+	margin-bottom: 10pt;
 }
 .page header .logo img, .page header .qrcode img {
 	height: 45pt;
@@ -182,8 +223,21 @@ body {
 	font-weight: bold;
 }
 
+.page .item .ennunciation-container .ennunciation {
+	float: left;
+	width: 90%;
+}
+.page .item .ennunciation-container .qrcode {
+	float: right;
+	width: 10%;
+	text-align: right;
+}
 .page .item .ennunciation-container .qrcode img{
 	height: 45pt;
+}
+.page .item .alternatives-container {
+	clear: both;
+	padding: 10pt 0;
 }
 
 
@@ -210,9 +264,29 @@ body {
 }
 #cover .form-container {
 	clear: both;
+	margin-top: 50pt;
 }
 #cover .instructions-container {
 	border-top: 1px solid #878784;
-	margin-top: 10pt;
+	margin: 20pt auto;
 	padding: 10pt;
 }
+#cover .instructions-container h4{
+	text-align: center;
+	margin-bottom: 10pt;
+}
+#cover .instructions-container .instructions {
+	-webkit-columns: 250pt 2;
+	   -moz-columns: 250pt 2;
+	        columns: 250pt 2;
+	        padding: 0;
+}
+#cover .instructions-container .instructions li {
+	margin-bottom: 1em;
+	font-size: 11pt;
+}
+
+
+
+
+
