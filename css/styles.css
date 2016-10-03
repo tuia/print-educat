@@ -184,7 +184,7 @@ ol {
 .page {
 	page-break-after: always;
 	position: relative;
-	height: calc(842pt - 113px);
+	min-height: 842pt;
 }
 /* page header */
 .page header {
@@ -229,6 +229,10 @@ ol {
  	border-bottom: 20px solid #ECECEC;
  	margin-bottom: 20pt;
  	padding-bottom: 10pt;
+}
+.page .item.dissertative {
+	overflow: auto;
+	height: auto;
 }
 .page .item .ennunciation p:first-child:before {
 	content: counter(question-counter) ') ';
