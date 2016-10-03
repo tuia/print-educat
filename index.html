@@ -24,7 +24,6 @@
   </head>
   <body>
 
-
     <!--FIRST PAGE-->
     <section id="cover" class="page">
       <header>
@@ -126,7 +125,7 @@
         </ol>
       </div>
       <footer>
-        <p>CMMG - Página 01 de 47</p>
+        <p>CMMG - Página <span class="this-index"></span> de <span class="total-index"></span></p>
       </footer>
     </section>
 
@@ -189,9 +188,23 @@
       </div><!--/page-content-->
 
       <footer>
-        <p>CMMG - Página 02 de 47</p>
+        <p>CMMG - Página <span class="this-index"></span> de <span class="total-index"></span></p>
       </footer>
     </section>
 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('.page').ready( function() {
+        var totalpages = $('body .page').length;
+            
+        $('.page footer .this-index').text( $(this).index() );
+        $('.page footer .total-index').text( totalpages );
+      });
+    </script>
+
   </body>
 </html>
+
+

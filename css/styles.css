@@ -8,6 +8,7 @@
 
 body {
 	font-family: Roboto, Helvetica, Arial, sans-serif;
+	counter-reset: question-counter page-counter;
 }
 
 
@@ -185,27 +186,6 @@ ol {
 	position: relative;
 	height: calc(842pt - 113px);
 }
-.page:before {
-	content: "Página 1 de 3";
-	font-family: "Roboto Condensed", sans-serif;
-	background: #878784;
-	color: #FFFFFF;
-	font-size: 12pt;
-	padding: 3pt 10pt;
-	text-align: right;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-}
-#cover.page:before {
-	display: none;
-}
-
-
-
-
-
 /* page header */
 .page header {
 	height: auto;
@@ -249,9 +229,6 @@ ol {
  	border-bottom: 20px solid #ECECEC;
  	margin-bottom: 20pt;
  	padding-bottom: 10pt;
-}
-body {
-	counter-reset: question-counter;
 }
 .page .item .ennunciation:before {
 	content: counter(question-counter) ') ';
@@ -323,13 +300,18 @@ body {
 
 /* page footer */
 .page footer {
+	content: 'Página ' counter(page-counter) ' de ';
+	counter-increment: page-counter;
 	font-family: "Roboto Condensed", sans-serif;
 	background: #878784;
 	color: #FFFFFF;
 	font-size: 12pt;
 	padding: 3pt 10pt;
 	text-align: right;
-	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }
  
 
@@ -375,11 +357,6 @@ body {
 @media print {
 	body {
 	  -webkit-print-color-adjust: exact;
-	}
-	.page .footer {
-		position: fixed;
-		bottom: 0;
-		width: 100%;
 	}
 }
 
