@@ -47,7 +47,7 @@ h4, h5, h6{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.ennunciation, .alternatives {
+.ennunciation-container, .alternatives {
 	font-size: 12pt;
 }
 
@@ -230,7 +230,7 @@ ol {
  	margin-bottom: 20pt;
  	padding-bottom: 10pt;
 }
-.page .item .ennunciation:before {
+.page .item .ennunciation p:first-child:before {
 	content: counter(question-counter) ') ';
 	counter-increment: question-counter;
 	font-weight: bold;
@@ -248,12 +248,21 @@ ol {
 .page .item .ennunciation-container .qrcode img{
 	height: 45pt;
 }
+.page .item .ennunciation-img-container {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.page .item .ennunciation-img-container img{
+	display: block;
+	margin: 10px auto;
+}
 .page .item .alternatives-container {
 	background: url(../img/alternative-map.png) repeat-y transparent top left;
 	clear: both;
 	padding: 0 0 0 0;
 	position: relative;
-	margin: 0 0 0 20px;
+	margin: 20px 0 0 20px;
 }
 .page .item .alternatives-container:before {
 	background: url(../img/alternative-map.png) no-repeat transparent top left;
