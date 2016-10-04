@@ -43,6 +43,9 @@ h4 {
 p {
 	line-height: 1.5em;
 }
+em, i {
+	font-style: italic;
+}
 h4, h5, h6{
   margin-top: 10px;
   margin-bottom: 10px;
@@ -243,6 +246,13 @@ ol {
 	float: left;
 	width: 90%;
 	margin-bottom: 10pt;
+}
+.ennunciation-container .reference {
+	font-style: italic;
+	color: #666;
+	display: block;
+	margin: 5px auto 20px;
+	font-size: 11pt
 }
 .page .item .ennunciation-container .qrcode {
 	float: right;
