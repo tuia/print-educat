@@ -53,6 +53,7 @@ h4, h5, h6{
 .ennunciation-container, .alternatives {
 	font-size: 12pt;
 }
+.text-center {text-align: center;}
 
 
 /* description lists */
@@ -134,9 +135,9 @@ table {
 .form-table > tbody > tr > td{
 	background: #ececec;
 	border: 3px solid #FFFFFF;
-	height: 26pt;
+	height: 28pt;
 	font-size: 13pt;
-	padding: 4pt 4pt 0;
+	padding: 5pt 4pt 0;
 }
 .name-table {
 	width: 100%;
@@ -157,7 +158,7 @@ table {
 	padding-bottom: 0;
 }
 .name-table > tbody > tr > td{
-	height: 32pt;
+	height: 40pt;
 }
 
 
