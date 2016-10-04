@@ -7,7 +7,7 @@
  */
 
 body {
-	font-family: Roboto, Helvetica, Arial, sans-serif;
+	font-family: "Roboto", sans-serif;
 	counter-reset: question-counter page-counter;
 }
 
@@ -125,7 +125,7 @@ table {
 /* FORM TABLE */
 .form-table {
 	font-family: "Roboto Condensed", sans-serif;
-	margin-bottom: 5pt;
+	margin: 5pt auto;
 }
 .form-table > thead > tr > th{
 	text-align: left;
@@ -141,6 +141,7 @@ table {
 .name-table {
 	width: 100%;
 	text-align: center;
+	margin: 20pt auto 5pt
 }
 .name-table > thead > tr > th{
 	text-align: center;
@@ -320,6 +321,10 @@ ol {
 .page .item .alternatives li:last-child {
 	margin-bottom: 25px;
 }
+.page .item .alternatives li.latex {
+	height: 50px;
+	margin-bottom: 25px;
+}
 
 /* page footer */
 .page footer {
@@ -370,7 +375,7 @@ ol {
 }
 #cover .instructions-container .instructions li {
 	margin-bottom: 1em;
-	font-size: 9pt;
+	font-size: 10pt;
 }
 
 
