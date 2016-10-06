@@ -1,0 +1,232 @@
+<style type="text/css">
+		
+	label {
+	  display: inline-block;
+	  max-width: 100%;
+	  margin-bottom: 5px;
+	  font-weight: bold;
+	}
+	.form-control {
+	  display: block;
+	  width: 100%;
+	  height: 34px;
+	  padding: 6px 12px;
+	  font-size: 14px;
+	  line-height: 1.42857143;
+	  color: #555555;
+	  background-color: #ffffff;
+	  background-image: none;
+	  border: 1px solid #cccccc;
+	  border-radius: 4px;
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	}
+	.form-control:focus {
+	  border-color: #66afe9;
+	  outline: 0;
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+	  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+	}
+	.form-control::-moz-placeholder {
+	  color: #999999;
+	  opacity: 1;
+	}
+	.form-control:-ms-input-placeholder {
+	  color: #999999;
+	}
+	.form-control::-webkit-input-placeholder {
+	  color: #999999;
+	}
+	.form-control::-ms-expand {
+	  border: 0;
+	  background-color: transparent;
+	}
+.form-group {
+  margin-bottom: 15px;
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-primary {
+  color: #ffffff;
+  background-color: #8c357e;
+  border-color: #7a2e6d;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #ffffff;
+  background-color: #67275d;
+  border-color: #1d0b1a;
+}
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #67275d;
+  border-color: #4d1d45;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #67275d;
+  border-color: #4d1d45;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #ffffff;
+  background-color: #4d1d45;
+  border-color: #1d0b1a;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+  background-color: #8c357e;
+  border-color: #7a2e6d;
+}
+
+form {
+	background: #f8f8f8;
+	padding: 20px;
+	height: auto;
+	overflow: auto;
+}
+.form-group {
+	width: 50%;
+	padding: 0 10px;
+	float: left;
+}
+.form-group.no-label {
+	padding-top: 25px;
+}
+.form-group.no-label .btn-primary{
+	width: 100%;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+body {
+	padding: 20px 0;
+}
+
+</style>
+
+
+<h1>Gerar Prova</h1>
+
+<form action="/hello" method="POST">
+	<div class="form-group">
+		<label class="control-label">Nome completo do aluno</label>
+		<input type="text" name="name" class="form-control">
+	</div>
+	<div class="form-group">
+		<label class="control-label">CPF do aluno</label>
+		<input type="text" name="cpf" class="form-control" data-mask="999.999.999-99" />
+	</div>
+	<div class="form-group">
+		<label class="control-label">Escola</label>
+		<select name="school" class="form-control">
+			<option>Faculdade de Ciências Médicas de Minas Gerais</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Campus</label>
+		<select name="campus" class="form-control">
+			<option>Belo Horizonte</option>
+			<option>Contagem</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Curso</label>
+		<select name="course" class="form-control">
+			<option>Graduação em Medicina</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Período</label>
+		<select name="level" class="form-control">
+			<option>1º período</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Prédio</label>
+		<select name="building" class="form-control">
+			<option>Unidade 01</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Sala</label>
+		<select name="classroom" class="form-control">
+			<option>601</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Prova</label>
+		<select name="test" class="form-control">
+			<option>Simulado Anasem - Avaliação Seriada dos Estudantes de Medicina</option>
+		</select>
+	</div>
+	<div class="form-group no-label">
+    	<input type="submit" value="Gerar prova" class="btn btn-primary">
+    </div>
+</form>
